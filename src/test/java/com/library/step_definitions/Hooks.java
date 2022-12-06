@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
-    @Before
+    @Before("@db")
     public void setUp(){
 
         System.out.println("this is coming from BEFORE");
@@ -23,7 +23,7 @@ public class Hooks {
 
     }
 
-    @After
+    @After("@db")
     public void tearDown(Scenario scenario){
         System.out.println("this is coming from AFTER");
 
